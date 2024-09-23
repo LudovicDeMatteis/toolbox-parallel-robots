@@ -35,8 +35,7 @@ class ActuationData:
         None
     """
 
-    def __init__(self, model, constraints_models, actuation_model,root_motor=False):
-
+    def __init__(self, model, constraints_models, actuation_model):
         Lidmot = actuation_model.mot_ids_v
         free_ids_v = actuation_model.free_ids_v
         nv = model.nv
@@ -88,5 +87,6 @@ class ActuationData:
         self.constraints_sizes = [J.shape[0] for J in self.LJ]
         self.pinvJfree = np.linalg.pinv(self.Jfree)
 
-        self.Lnc=[J.shape[0] for J in self.LJ]
-        self.pinvJfree=np.linalg.pinv(self.Jfree)
+        self.Lnc = [J.shape[0] for J in self.LJ]
+        self.pinvJfree = np.linalg.pinv(self.Jfree)
+
