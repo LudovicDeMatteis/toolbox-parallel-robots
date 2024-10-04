@@ -1,8 +1,13 @@
 import tkinter as tk
+from functools import partial
+
 import numpy as np
 import pinocchio as pin
+<<<<<<< HEAD
 from functools import partial
 from toolbox_parallel_robots.mounting import closedLoopMountProximal
+=======
+>>>>>>> b23ac5a (pre-commit run -a)
 
 
 class SlidersFrame:
